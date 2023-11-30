@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Debug Data</title>
+</head>
+<body>
+
+<script>
+    // Sử dụng fetch để gửi GET request đến URL http://localhost:1337/debug/environment
+    fetch('http://localhost:1337/debug/environment')
+        .then(response => response.json())
+        .then(data => {
+            // Log dữ liệu vào console
+            console.log(data);
+        })
+        .catch(error => {
+            // Log lỗi vào console nếu có
+            console.error('Error:', error);
+        });
+</script>
+
+</body>
+</html>
